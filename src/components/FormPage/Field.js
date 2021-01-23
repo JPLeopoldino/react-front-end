@@ -1,4 +1,5 @@
 import React from 'react';
+import ClientContext from '../../context/ClientContext';
 import classes from './Field.module.css';
 
 const field = (props)=>{
@@ -6,19 +7,32 @@ const field = (props)=>{
 
     switch(props.especification.type){
         case 'select':
-            input = <select {...props.especification.attributes}>
-                { props.especification.options.map((opt, i)=>{
-                        return(
-                            <option key={opt.value + i} value={opt.value}>
-                                {opt.subtitle}
-                            </option>
-                        )
-                    })
-                }
-            </select>;
+            input =
+            <ClientContext.Consumer>
+                { context=>{
+                    return(
+                        <select {...props.especification.attributes} onChange={ context.change }>
+                            { props.especification.options.map((opt, i) => {
+                                return (
+                                    <option key={opt.value + i} value={opt.value}>
+                                        {opt.subtitle}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    );
+                }}
+            </ClientContext.Consumer>;
             break;
         default:
-            input = <input type={props.especification.type} {...props.especification.attributes} />;
+            input =
+            <ClientContext.Consumer>
+                { context=>{
+                    return(
+                        <input type={props.especification.type} {...props.especification.attributes} onChange={ context.change }/>
+                    );
+                }}
+            </ClientContext.Consumer>;
             break;
     }
     

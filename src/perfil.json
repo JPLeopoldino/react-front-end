@@ -1,0 +1,13 @@
+{
+    "name": "João Pedro",
+    "cpf": "111.222.333-45",
+    "email": "joao@gmail.com",
+    "phone": "16 99749-1979",
+    "password": "mudar123",
+    "rua": "Rua Joaquin",
+    "numeroRua": "222",
+    "bairro": "Vale do cilício",
+    "cidade": "BES",
+    "cep": "12345678",
+    "uf": "Sampa"
+}

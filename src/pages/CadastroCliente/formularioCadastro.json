@@ -1,0 +1,22 @@
+{
+    "titulo": "Formulário de Cadastro",
+    "campos": [
+        { "label": "Nome", "type": "text", "attributes":{ "id": "name", "name": "name", "required": "required"} },
+        { "label": "Sobrenome", "type": "text", "attributes":{ "id": "lastName", "name": "lastName", "required": "required"} },
+        { "label": "Email", "type": "email", "attributes":{ "id": "email", "name": "email", "required": "required"} },
+        { "label": "Senha", "type": "password", "attributes":{ "id": "password", "name": "password", "required": "required"} },
+        { "label": "CPF", "type": "text", "attributes":{ "id": "cpf", "name": "cpf", "placeholder": "000.000.000-00"} },
+        { "label": "Telefone", "type": "tel", "attributes":{ "id": "phone", "name": "phone", "placeholder": "(00) 0 0000-0000"} },
+        { "label": "Rua", "type": "text", "attributes":{ "id": "rua", "name": "rua"} },
+        { "label": "Nº", "type": "text", "attributes":{ "id": "numeroRua", "name": "numeroRua"} },
+        { "label": "Bairro", "type": "text", "attributes":{ "id": "bairro", "name": "bairro"} },
+        { "label": "Cidade", "type": "text", "attributes":{ "id": "cidade", "name": "cidade"} },
+        { "label": "Estado", "type": "select", "attributes":{ "id": "estado", "name": "estado", "defaultValue": "sp"}, 
+            "options": [
+                {"value": "sp", "subtitle": "São Paulo"},
+                {"value": "rj", "subtitle": "Rio de Janeiro"},
+                {"value": "mt", "subtitle": "Mato Grosso"}
+        ]},
+        { "label": "Foto", "type": "text", "attributes":{ "id": "photo", "name": "photo"} }
+    ]
+}
