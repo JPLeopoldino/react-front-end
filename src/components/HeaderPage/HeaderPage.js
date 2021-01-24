@@ -3,12 +3,27 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo-bravo-black.png';
 import classes from './HeaderPage.module.css'
 import { PersonCircle, Cart2 } from 'react-bootstrap-icons';
+import ProfilePic from '../../assets/profile.jpg';
 
 
 const headerPage = (props) => {
     return(
     <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-warning">
+        <nav>
+            <a className={classes.icons}><img src={logo}></img></a>
+            <Link className={classes.link} to='/'>Loja</Link>
+            <Link className={classes.link} to='/perfil'>Perfil</Link>
+            <Link className={classes.link} to='/products'>Carrinho</Link>
+            <Link className={classes.link} to='/cadastroCliente'>Sobre</Link>
+            <Link to='/perfil' className={classes.icons}><img src={ProfilePic} className={classes.userpic}></img></Link>
+        </nav>
+    </header>
+    );
+}
+
+export default headerPage;
+
+{/* <nav className="navbar navbar-expand-lg navbar-light bg-warning">
             <div className="container-fluid d-flex">
                 <a className="navbar-brand" href="#">
                     <img src={logo} className={classes.logo}/>
@@ -39,9 +54,4 @@ const headerPage = (props) => {
                 </div>
 
             </div>
-        </nav>
-    </header>
-    );
-}
-
-export default headerPage;
+        </nav> */}

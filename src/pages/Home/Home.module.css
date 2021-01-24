@@ -1,0 +1,158 @@
+.main{
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    background: linear-gradient(167.95deg, #FEF9F2 0%, #FFF6D8 100%), #FFFFFF;
+}
+.mainTitle{
+    position: absolute;
+    width: 178px;
+    height: 56px;
+    left: 27px;
+    top: 128px;
+}
+.mainTitle > h3 {
+    position: absolute;
+    height: 21px;
+    left: 5px;
+    top: 128px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+
+    color: #000000;
+}
+.mainTitle > h1{
+    position: absolute;
+    width: 200px;
+    height: 29px;
+    left: 0px;
+    top: 155px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+
+    color: #000000;
+}
+.searchBar{
+    position: absolute;
+    width: 1172px;
+    height: 155px;
+    left: 27px;
+    top: 128px;
+}
+.bar{
+    position: absolute;
+    width: 908px;
+    height: 15px;
+    left: 241px;
+    top: 218px;
+    padding: 35px 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #ECE3C5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(116, 85, 5, 0.2);
+    border-radius: 60px;
+    outline: 0px solid transparent;    
+    letter-spacing: 0.2em;
+    font-size: 22px;
+    color: #9c9889;
+    text-transform: capitalize;
+}
+
+.bar::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: none;
+
+    color: #D6D0BB;
+    opacity: 1; /* Firefox */
+}
+
+.bar::selection{
+    color: #FFF;
+    background: #f8cf3a;
+}
+
+.filtro{
+    position: absolute;
+    left: 300px;
+    top: 500px;
+}
+
+.filtro > h2{
+    position: absolute;
+    width: 107px;
+    height: 23px;
+    left: -270px;
+    top: -15px;
+
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+}
+
+div form input{
+    -webkit-appearance: none;
+    margin: 15px;
+}
+
+div form label{
+    width: 158px;
+    height: 100px;
+    
+    border: 1px solid #ECE3C5;
+    background: #FFFFFF;
+    margin: auto;
+    box-shadow: 0px 4px 4px rgba(116, 85, 5, 0.2);
+    border-radius: 31px;
+    color: #D6D0BB;
+    transition: 80ms ease-in;
+    cursor: pointer;
+}
+
+label div{
+    display: flex;
+    flex-direction: column;
+}
+
+label i{
+    font-size: 40px;
+}
+
+label span{
+    font-weight: bold;
+}
+
+
+input[type="radio"]:checked + label{
+    color: #FFC700;
+    border: 1px solid #FFC700;
+    box-shadow: 0px 4px 16px rgba(228, 192, 0, 0.35);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}

@@ -66,7 +66,6 @@ class App extends Component{
             <Routes />
 
             {/* <Profile pic={profilePic} dados={PerfilDados} /> */}
-            <h3>Rodapé</h3>
           </ClientContext.Provider>
         </BrowserRouter>
       </div>
