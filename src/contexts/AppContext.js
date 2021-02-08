@@ -1,6 +1,6 @@
 import React from 'react';
 
-const clientContext = React.createContext({
+const appContext = React.createContext({
     client: {
         name: '',
         lastName: '',
@@ -16,7 +16,10 @@ const clientContext = React.createContext({
     },
     products: [],
     change: ()=>{},
-    create: ()=>{}
+    create: ()=>{},
+    search: ()=>{},
+    searchC: ()=>{},
+    filter: ()=>{}
 });
 
-export default clientContext;
+export default appContext;

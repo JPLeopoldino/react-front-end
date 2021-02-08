@@ -1,5 +1,5 @@
 import React from 'react';
-import ClientContext from '../../context/ClientContext';
+import AppContext from '../../contexts/AppContext';
 import classes from './Field.module.css';
 
 const field = (props)=>{
@@ -8,7 +8,7 @@ const field = (props)=>{
     switch(props.especification.type){
         case 'select':
             input =
-            <ClientContext.Consumer>
+            <AppContext.Consumer>
                 { context=>{
                     return(
                         <select {...props.especification.attributes} onChange={ context.change }>
@@ -22,17 +22,17 @@ const field = (props)=>{
                         </select>
                     );
                 }}
-            </ClientContext.Consumer>;
+            </AppContext.Consumer>;
             break;
         default:
             input =
-            <ClientContext.Consumer>
+            <AppContext.Consumer>
                 { context=>{
                     return(
                         <input type={props.especification.type} {...props.especification.attributes} onChange={ context.change }/>
                     );
                 }}
-            </ClientContext.Consumer>;
+            </AppContext.Consumer>;
             break;
     }
     

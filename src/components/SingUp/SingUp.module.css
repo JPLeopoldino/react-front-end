@@ -1,0 +1,100 @@
+.singupForm{
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox{
+    position: relative;
+    margin: 20px 0 20px 0;
+}
+
+.inputBox input{
+    margin-bottom: 10px;
+    width: 100% !important;
+    padding: 5px 0;
+    
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #b8aa7f;
+    outline: none;
+}
+
+.inputBox input::selection{
+    color: #FFF;
+    background: #f8cf3a;
+}
+
+.inputBox input::-webkit-input-placeholder{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    
+    font-size: 18px;
+    font-weight: 300;
+    color: #b8aa7f;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputBox input:focus::-webkit-input-placeholder{
+    opacity: 15%;
+}
+
+.singupForm .inputBox input:focus ~ span,
+.singupForm .inputBox input:valid ~ span{
+    transform: translateY(-22px);
+    font-size: 15px;
+    color: #FFC700;
+}
+
+.singupForm > button{
+    position: absolute;
+    bottom: -0.3vh;
+    margin-top: 30px;
+    width: 20vh;
+    border-radius: 40vh;
+    padding: 5px;
+    background: #FFC700;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.8s ease;
+    font-size: 16px;
+    border: 2px solid #FFC700;
+    outline: 0px;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.singupForm > button:hover,
+.singupForm > button:focus{
+    color: #FFC700;
+}
+
+.singupForm > button::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #FFF;
+    z-index: -1;
+    transition: 0.8s ease;
+    border-radius: 40% 0 0 40%;
+    bottom: 0;
+}
+
+.singupForm > button:hover::before,
+.singupForm > button:focus::before{
+    width: 150%;
+}

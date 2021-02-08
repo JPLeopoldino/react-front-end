@@ -1,19 +1,21 @@
 import React from 'react';
-import ClientContext from '../../context/ClientContext';
+import AppContext from '../../contexts/AppContext';
+import HeaderPage from '../../components/HeaderPage/HeaderPage';
 
 const productsPage = ()=>{
     return(
-        <ClientContext.Consumer>
-            {context=>{
-                return(
-                    <div>
-                        {context.products.map((p)=>{
-                            return <p key={p.id}>{p.productName}</p>
-                        })}
-                    </div>
-                );
-            }}
-        </ClientContext.Consumer>
+        <div>
+            <HeaderPage />
+            <AppContext.Consumer>
+                {context=>{
+                    return(
+                        context.products.map((p)=>{
+                                return <p key={p.id}>{p.productName}</p>
+                        })
+                    );
+                }}
+            </AppContext.Consumer>
+        </div>
     );
 }
 

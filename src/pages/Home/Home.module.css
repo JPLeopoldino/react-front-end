@@ -1,15 +1,12 @@
 .main{
-    position: relative;
-    width: 100%;
-    height: 1024px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(167.95deg, #FEF9F2 0%, #FFF6D8 100%), #FFFFFF;
 }
 .mainTitle{
-    position: absolute;
-    width: 178px;
-    height: 56px;
-    left: 27px;
-    top: 128px;
+    top: 500px;
+    left: 50px;
 }
 .mainTitle > h3 {
     position: absolute;
@@ -109,12 +106,12 @@
     color: #000000;
 }
 
-div form input{
+.homeForm > input{
     -webkit-appearance: none;
     margin: 15px;
 }
 
-div form label{
+.homeForm > label{
     width: 158px;
     height: 100px;
     
@@ -155,4 +152,76 @@ input[type="radio"]:checked + label{
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
+}
+
+/* .productItem > div{
+width: 177px;
+height: 220px;
+display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+background: #FFFFFF;
+border: 1px solid #ECE3C5;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(116, 85, 5, 0.2);
+border-radius: 35px;
+}
+
+.productItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.productItem > div > img{
+    width: 120px;
+    height: 86px;
+    margin: 0px
+}
+
+.productItem > div > h1{
+
+left: 767px;
+top: 741px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.productItem > div > h2{
+
+left: 557px;
+top: 781px;
+
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.productItem > div:hover{
+    width: 201px;
+    height: 250px;
+    
+    color: #FFF;
+    background: linear-gradient(212.88deg, #FFC700 13.54%, #FF772B 100%);
+    box-shadow: 0px 4px 4px rgba(228, 192, 0, 0.35);
+    border-radius: 35px;
+} */
+
+.productItem{
+    margin-top: 700px;
 }
